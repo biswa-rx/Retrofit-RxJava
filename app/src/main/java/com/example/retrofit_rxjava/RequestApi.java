@@ -1,10 +1,9 @@
 package com.example.retrofit_rxjava;
 
-import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.Flowable;
 import retrofit2.http.GET;
 
 public interface RequestApi {
-
-    @GET("/posts/1")
-    Observable<ResponseBody> makeObservableQuery();
+    @GET("posts/1")
+    Flowable<ResponseBody> makeQuery();
 }
